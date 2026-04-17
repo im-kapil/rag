@@ -108,12 +108,40 @@ Responsible for:
 ## 📂 Project Structure
 
 ```
-.
-├── generate_embedding.py   # Ingestion pipeline
-├── main.py                 # Retrieval pipeline
+
+├── README.md
+├── __pycache__
+│   ├── chroma_client.cpython-312.pyc
+│   ├── config.cpython-312.pyc
+│   ├── document_loader.cpython-312.pyc
+│   ├── embedding_function.cpython-312.pyc
+│   ├── embedding_manager.cpython-312.pyc
+│   ├── embedding_model.cpython-312.pyc
+│   └── query_helper.cpython-312.pyc
+├── chroma
+│   └── chroma.sqlite3
+├── chroma_client.py
+├── config.py
+├── data
+├── document_loader.py
+├── embedding_manager.py
+├── embedding_model.py
+├── generate_embedding.py
+├── main.py
+├── notebooks
+│   ├── chroma_db.ipynb
+│   └── document.ipynb
+├── query_helper.py
 ├── requirements.txt
-├── .env.example
-└── README.md
+└── vector_store
+    ├── 51df7c47-b390-4cc9-9eb7-41fd3c46ed4a
+    │   ├── data_level0.bin
+    │   ├── header.bin
+    │   ├── index_metadata.pickle
+    │   ├── length.bin
+    │   └── link_lists.bin
+    └── chroma.sqlite3
+
 ```
 
 ---
