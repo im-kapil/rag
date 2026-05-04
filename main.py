@@ -9,14 +9,14 @@ def main():
     collection = client.get_collection(collection_name=Config.COLLECTION_NAME)
     
     queries = [
-        "LLM finetuning?"
+        "attention mechanism?"
         ]
 
     result = perform_search(collection=collection, query_texts=queries, results=10)
     
-    # print(":::::::::::::::::::::::::::: Queries result :::::::::::::::::::::::::::: \n ", result["documents"][0])
+    print(":::::::::::::::::::::::::::: Queries result :::::::::::::::::::::::::::: \n ", result["documents"][0])
 
-    print(":::::::::::::::::::::::::::: Queries result :::::::::::::::::::::::::::: \n ", result)
+    # print(":::::::::::::::::::::::::::: Queries result :::::::::::::::::::::::::::: \n ", result)
 
 
 if __name__ == "__main__":

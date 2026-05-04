@@ -32,7 +32,10 @@ class ChromaClient:
     def get_or_create_collection(self, collection_name: str, metadata: Optional[Dict[str, Any]] = None) -> Collection:
         try:
             print(f"Getting or creating collection: {collection_name}")
-            return self.client.get_or_create_collection(name=collection_name, metadata=metadata)
+            return self.client.get_or_create_collection(
+                name=collection_name, 
+                metadata=metadata
+                )
         except Exception as e:
             print(f"Failed to get/create collection: {collection_name}")
             raise

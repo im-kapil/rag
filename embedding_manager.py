@@ -34,8 +34,15 @@ class EmbeddingManager:
         return embeddings  
     
     def document_chunker(self, document_chunk: Any):
+        # Unceooment if needs smaller chunk size
+        # text_splitter = RecursiveCharacterTextSplitter(
+        #     chunk_size=100,
+        #     chunk_overlap=0
+        #     )
+        
         text_splitter = RecursiveCharacterTextSplitter(
-            chunk_size=100,
-            chunk_overlap=0
-            )
+            chunk_size=500,
+            chunk_overlap=50,
+            separators=["\n\n", "\n", ". ", " "]
+        )
         return text_splitter.split_text(document_chunk)
